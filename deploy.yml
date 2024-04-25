@@ -105,7 +105,7 @@ Resources:
               "build": {
                 "commands": [
                   "git clone https://github.com/ygautomo/02-aws-bedrock-claude-chat.git",
-                  "cd bedrock-claude-chat/cdk",
+                  "cd 02-aws-bedrock-claude-chat/cdk",
                   "npm ci",
                   "cdk bootstrap",
                   "cdk deploy --require-approval never --all"
