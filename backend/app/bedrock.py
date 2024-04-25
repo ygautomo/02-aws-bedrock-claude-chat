@@ -9,7 +9,7 @@ from app.utils import get_bedrock_client
 
 logger = logging.getLogger(__name__)
 
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-west-2")
 
 
 client = get_bedrock_client()

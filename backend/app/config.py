@@ -44,7 +44,7 @@ SEARCH_CONFIG = {
 # NOTE: The following is based on 2024-03-07
 # See: https://aws.amazon.com/bedrock/pricing/
 ANTHROPIC_PRICING = {
-    "us-east-1": {
+    "us-west-2": {
         "claude-instant-v1": {
             "input": 0.00080,
             "output": 0.00240,

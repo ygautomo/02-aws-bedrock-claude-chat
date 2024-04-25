@@ -25,7 +25,7 @@ from ulid import ULID
 
 logging.basicConfig(level=logging.INFO)
 
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-west-2")
 
 
 DB_NAME = os.environ.get("DB_NAME", "postgres")
