@@ -11,7 +11,7 @@ describe("Fine-grained Assertions Test", () => {
       app,
       "IdentityProviderGenerateStack",
       {
-        bedrockRegion: "us-west-2",
+        bedrockRegion: "us-east-1",
         crossRegionReferences: true,
         webAclId: "",
         identityProviders: [
@@ -62,7 +62,7 @@ describe("Fine-grained Assertions Test", () => {
       app,
       "OidcProviderGenerateStack",
       {
-        bedrockRegion: "us-west-2",
+        bedrockRegion: "us-east-1",
         crossRegionReferences: true,
         webAclId: "",
         identityProviders: [
@@ -109,7 +109,7 @@ describe("Fine-grained Assertions Test", () => {
     const app = new cdk.App();
 
     const stack = new BedrockChatStack(app, "MyTestStack", {
-      bedrockRegion: "us-west-2",
+      bedrockRegion: "us-east-1",
       crossRegionReferences: true,
       webAclId: "",
       identityProviders: [],
@@ -132,7 +132,7 @@ describe("Scheduler Test", () => {
   test("has schedules", () => {
     const app = new cdk.App();
     const hasScheduleStack = new BedrockChatStack(app, "HasSchedulesStack", {
-      bedrockRegion: "us-west-2",
+      bedrockRegion: "us-east-1",
       crossRegionReferences: true,
       webAclId: "",
       identityProviders: [],
@@ -169,7 +169,7 @@ describe("Scheduler Test", () => {
   test("has'nt schedules", () => {
     const app = new cdk.App();
     const defaultStack = new BedrockChatStack(app, "DefaultStack", {
-      bedrockRegion: "us-west-2",
+      bedrockRegion: "us-east-1",
       crossRegionReferences: true,
       webAclId: "",
       identityProviders: [],

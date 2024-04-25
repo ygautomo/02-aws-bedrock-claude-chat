@@ -10,7 +10,7 @@ import boto3
 from app.repositories.custom_bot import find_public_bots_by_ids
 from app.repositories.models.usage_analysis import UsagePerBot, UsagePerUser
 
-REGION = os.environ.get("REGION", "us-west-2")
+REGION = os.environ.get("REGION", "us-east-1")
 USAGE_ANALYSIS_DATABASE = os.environ.get(
     "USAGE_ANALYSIS_DATABASE", "bedrockchatstack_usage_analysis"
 )

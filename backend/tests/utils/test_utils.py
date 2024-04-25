@@ -22,12 +22,12 @@ class TestUtils(unittest.TestCase):
         LOGGER.debug("Region: ")
         LOGGER.debug(reg)
 
-        assert reg == "us-west-2"
+        assert reg == "us-east-1"
 
     def test_get_bedrock_client_alt(self):
         from app.utils import get_bedrock_client
 
-        client = get_bedrock_client("us-west-2")
+        client = get_bedrock_client("us-east-1")
         assert client is not None
 
         cli_dict = client.__dict__
@@ -37,7 +37,7 @@ class TestUtils(unittest.TestCase):
         LOGGER.debug("Region: ")
         LOGGER.debug(reg)
 
-        assert reg == "us-west-2"
+        assert reg == "us-east-1"
 
 
 if __name__ == "__main__":

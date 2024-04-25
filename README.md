@@ -3,7 +3,7 @@
 ![](https://github.com/aws-samples/bedrock-claude-chat/actions/workflows/cdk.yml/badge.svg)
 
 > [!Tip]
-> 🔔**Claude3 Opus supported.** As of 04/17/2024, Bedrock only supports the `us-west-2` region. In this repository, Bedrock uses the `us-west-2` region by default. Therefore, if you plan to use it, please change the value of `bedrockRegion` before deployment. For more details, please refer [here](#deploy-using-cdk).
+> 🔔**Claude3 Opus supported.** As of 04/17/2024, Bedrock only supports the `us-east-1` region. In this repository, Bedrock uses the `us-east-1` region by default. Therefore, if you plan to use it, please change the value of `bedrockRegion` before deployment. For more details, please refer [here](#deploy-using-cdk).
 
 > [!Info]
 > We'd like to hear your feedback to implement bot creation permission management feature. The plan is to grant permissions to individual users through the admin panel, but this may increase operational overhead for existing users. [Please take the survey](https://github.com/aws-samples/bedrock-claude-chat/issues/161#issuecomment-2058194533).
@@ -45,7 +45,7 @@ Analyze usage for each user / bot on administrator dashboard. [detail](./docs/AD
 
 ## 🚀 Super-easy Deployment
 
-- In the us-west-2 region, open [Bedrock Model access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) > `Manage model access` > Check `Anthropic / Claude 3 Haiku`, `Anthropic / Claude 3 Sonnet` and `Cohere / Embed Multilingual` then `Save changes`.
+- In the us-east-1 region, open [Bedrock Model access](https://us-east-1.console.aws.amazon.com/bedrock/home?region=us-east-1#/modelaccess) > `Manage model access` > Check `Anthropic / Claude 3 Haiku`, `Anthropic / Claude 3 Sonnet` and `Cohere / Embed Multilingual` then `Save changes`.
 
 <details>
 <summary>Screenshot</summary>
@@ -168,10 +168,10 @@ npm ci
 npm i -g aws-cdk
 ```
 
-- Before deploying the CDK, you will need to work with Bootstrap once for the region you are deploying to. In this example, we will deploy to the us-west-2 region. Please replace your account id into `<account id>`.
+- Before deploying the CDK, you will need to work with Bootstrap once for the region you are deploying to. In this example, we will deploy to the us-east-1 region. Please replace your account id into `<account id>`.
 
 ```
-cdk bootstrap aws://<account id>/us-west-2
+cdk bootstrap aws://<account id>/us-east-1
 ```
 
 - If necessary, edit the following entries in [cdk.json](./cdk/cdk.json) if necessary.
@@ -218,7 +218,7 @@ GENERATION_CONFIG = {
 
 ### Remove resources
 
-If using cli and CDK, please `cdk destroy`. If not, access [CloudFormation](https://console.aws.amazon.com/cloudformation/home) and then delete `BedrockChatStack` and `FrontendWafStack` manually. Please note that `FrontendWafStack` is in `us-west-2` region.
+If using cli and CDK, please `cdk destroy`. If not, access [CloudFormation](https://console.aws.amazon.com/cloudformation/home) and then delete `BedrockChatStack` and `FrontendWafStack` manually. Please note that `FrontendWafStack` is in `us-east-1` region.
 
 ### Stopping Vector DB for RAG
 
